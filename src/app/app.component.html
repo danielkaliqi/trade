@@ -1,0 +1,62 @@
+<header id="header">
+  <div class="container">
+    <div id="logo" class="pull-left">
+      <h1 *ngIf="!isLoggedIn"><a href="/home" routerLink="home">Trade</a></h1>
+      <h1 *ngIf="isLoggedIn && !showAdminBoard"><a href="/main" routerLink="main">Trade</a></h1>
+      <h1 *ngIf="showAdminBoard"><a href="/admin">Trade</a></h1>
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu" routerLinkActive="active">
+        <li *ngIf="!isLoggedIn">
+          <a href="/home" routerLink="home">Home</a>
+        </li>
+        <li *ngIf="isLoggedIn && !showAdminBoard">
+          <a href="/main" routerLink="main">Home</a>
+        </li>
+        <li *ngIf="showAdminBoard">
+          <a href="/admin" routerLink="admin">Admin Board</a>
+        </li>
+        <li *ngIf="isLoggedIn && !showAdminBoard">
+          <a href="/myItems" [routerLink]="['/myItems',currentUser.id]">MyItems</a>
+        </li>
+        <li *ngIf="isLoggedIn && !showAdminBoard">
+          <a href="/myBids" [routerLink]="['/myBids',currentUser.id]">MyBids</a>
+        </li>
+        <li *ngIf="isLoggedIn && !showAdminBoard">
+          <a [routerLink]="['/myItems',currentUser.id,'addItem']">Add item</a>
+        </li>
+        <li *ngIf="!isLoggedIn">
+          <a href="/register" routerLink="register">Sign Up</a>
+        </li>
+        <li *ngIf="!isLoggedIn">
+          <a href="/login" routerLink="login">Login</a>
+        </li>
+        <li *ngIf="isLoggedIn && showAdminBoard">
+          <a [routerLink]="['admin/allUsers']">Users</a>
+        </li>
+        <li *ngIf="isLoggedIn && showAdminBoard">
+          <a [routerLink]="['admin/allItems']">Items</a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a href (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="outlet">
+  <router-outlet></router-outlet>
+</div>
+
+<footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>2020</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by Daniel Kaliqi
+    </div>
+  </div>
+</footer>

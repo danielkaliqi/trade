@@ -1,0 +1,75 @@
+.myItems-container{
+  text-align: center;
+  font-family: arial; 
+    position:relative;
+    top:60px;
+    height: 100%;
+    overflow: hidden;
+    margin:40px;
+}
+.myItem{
+    box-shadow: 0 0 10px #1769d4;
+    float:left;
+    width:25%; 
+    margin:45px;
+    box-sizing:inherit;
+    background-color: white;
+}
+.myItem img{
+    width:200px;
+    height:200px;
+    margin:25px;
+    max-width: 100%;
+    max-height:100%;
+}
+@media (max-width: 1000px){
+    .myItem img{
+        width: 50%;
+        height: 100%;
+    }
+    .description{
+        width:90%;
+    }
+}
+.myItem button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  margin: 15px;
+  
+}
+.myItem button {
+    color: white;
+}
+
+.myItem button:hover {
+  opacity: 0.7;
+}
+
+.myItem h3{
+    font-weight: bold;
+}
+
+.myItem h5{
+    font-weight:lighter;
+    margin: 10px;
+    
+}
+.myItem .description{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+.add-button{
+    position: fixed;
+    right: 30px;
+    float: right;
+}

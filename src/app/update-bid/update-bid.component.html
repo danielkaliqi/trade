@@ -1,0 +1,12 @@
+<div class="updateBid">
+    <h3>Update Bid</h3>
+    <div style="width: 400px;">
+        <form *ngIf="!isSubmitted" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="bidName">Name</label>
+                <input type="text" class="form-control" id="bidName" required [(ngModel)]="bid.bidName" name="bidName">
+            </div>
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+    </div>
+</div>

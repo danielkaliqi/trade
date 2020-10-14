@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\board-admin",
+    "\\src\\app\\home",
+    "\\src\\app\\_helpers",
+    "\\src\\app\\_services",
+    "\\src\\environments"
+  ],
+  "PreviewInSolutionExplorer": false
+}

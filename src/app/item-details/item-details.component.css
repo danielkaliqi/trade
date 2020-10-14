@@ -1,0 +1,59 @@
+.item-container{
+    text-align: center;
+    font-family: arial; 
+      position:relative;
+      top:60px;
+      height: 100%;
+      overflow: hidden;
+  }
+  .item{
+      box-shadow: 0 0 10px #1769d4;
+      float:left;
+      width:85%; 
+      padding-bottom: 60px;
+      margin:60px;
+      box-sizing:inherit;
+      background-color: white;
+  }
+  .item img{
+      width:300px;
+      height:300px;
+      margin:25px;
+      float:left;
+  }
+  @media (max-width: 800px){
+    .item img{
+        width: 50%;
+        height: 100%;
+    }
+}
+  
+  .item button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    font-size: 18px;
+    margin: 15px;
+  }
+  .item button a{
+      color: white;
+  }
+  
+  .item button:hover {
+    opacity: 0.7;
+  }
+  
+  .item h3{
+      font-weight:lighter;
+      margin: 10px;
+      overflow: hidden;
+  }
+  .item .info{
+      margin-top: 100px;
+      margin-bottom: 50px;
+  }
+  

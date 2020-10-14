@@ -1,0 +1,13 @@
+<div class="items-container" *ngIf="itemsFound">
+    <div class="items-list"  *ngFor="let item of items">
+      <div  class="item" *ngIf="item?.active">
+        <img src="{{item.image}}" width="200px" height="200px">
+        <h3>{{item.itemName}}</h3>
+        <h5 class="description">{{item.description}}</h5>
+        <button type="button" class="btn btn-info" [routerLink]="['/items',item.id]">Details</button>
+      </div>
+    </div>
+  </div>
+<div class="noItem" *ngIf="!itemsFound">
+    No items found!
+</div>

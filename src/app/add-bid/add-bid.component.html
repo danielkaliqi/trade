@@ -1,0 +1,22 @@
+<div class="addBid-container">
+    <h1><strong> Add bid </strong></h1>
+    <div class="addBid">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" *ngIf="bid" novalidate>
+            <div class="form-group">
+                <input type="text" class="form-control" id="contact" required [(ngModel)]="bid.contact" name="contact"
+                    placeholder="Contact email">
+            </div>
+            <div class="form-group">
+                <h3>Item to be offered: 
+                <select name="itemOffered" id="itemOffered" required [(ngModel)]="bid.itemOffered">
+                    <option [value]="undefined" disabled selected>Select an item</option>
+                    <option *ngFor="let item of items" [ngValue]="item" >
+                        {{item.itemName}}
+                    </option>
+                </select>
+            </h3>
+            </div>
+            <button type="submit" class="btn btn-success">Add bid</button>
+        </form>
+    </div>
+</div>

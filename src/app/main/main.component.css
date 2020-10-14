@@ -1,0 +1,24 @@
+.main{
+    font-family: inherit;
+    top:100px;
+    width:50%;
+    height:65%;
+    position: absolute;
+    margin-left: 25%;
+    background: #fff;
+	box-shadow: 0 0 10px #1769d4;
+    margin-bottom: 60px;
+    border-radius: 1%;
+}
+.main-container{
+    width: 100%;
+    height:100%;
+}
+button{
+    border-color: #013981 ;
+    font-size: 40px;
+}
+.btn:hover{
+    background-color: #1769d4;
+    color: white;
+}

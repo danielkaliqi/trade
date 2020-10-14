@@ -1,0 +1,18 @@
+<div class="myItems-container">
+  <div class="myItems-list"  *ngIf="itemsFound">
+    <div class="myItem" *ngFor="let item of Items">
+      <img src="{{item.image}}">
+      <h3>{{item.itemName}}</h3>
+      <h5 class="description">{{item.description}}</h5>
+      <h5>Active: {{item.active}} </h5>
+      <button type="button" class="btn btn-info" [routerLink]="['/myItems',userId,item.id,'bids']">All bids</button>
+      <button type="button" class="btn btn-info" [routerLink]="['/myItems',userId,item.id,'update']">Update</button>
+      <button type="button" (click)="deleteItem(userId,item.id)" class="btn btn-danger">Delete</button>
+    </div>
+    <button type="button" class="btn btn-info add-button" [routerLink]="['/myItems',userId,'addItem']">NEW</button>
+  </div>
+  <div class="noItems" *ngIf="!itemsFound">
+    <h3>No items found! Click below to add an item.</h3>
+    <button type="button" class="btn btn-info" [routerLink]="['/myItems',userId,'addItem']">Add new item</button>
+  </div>
+</div>

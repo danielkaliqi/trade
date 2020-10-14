@@ -1,0 +1,89 @@
+.myBids-container{
+    text-align: center;
+    font-family: arial; 
+      position:relative;
+      top:60px;
+      height: 100%;
+      overflow: hidden;
+      margin:40px;
+      min-width: 5%;
+  }
+  .myBid{
+      box-shadow: 0 0 10px #1769d4;
+      float:left;
+      width:25%; 
+      margin:45px;
+      box-sizing:inherit;
+      background-color: white;
+  }
+  .myBid img{
+      max-width:150px;
+      max-height:150px;
+      margin:25px;
+  }
+  @media (max-width: 800px){
+    .myBid img{
+        width: 50%;
+        height: 100%;
+    }
+}
+  
+  .myBid button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin: 15px;
+    
+  }
+  .myBid button a{
+      color: white;
+  }
+  
+  .myBid button:hover {
+    opacity: 0.7;
+  }
+  
+  .myBid h1{
+      margin-top:50px;
+  }
+  
+  .myBid h5{
+      font-weight:lighter;
+      margin: 10px;
+      
+  }
+  .myBid .description{
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width:90%;
+  }
+  .noBid{
+      text-align: center;
+      margin-top:100px;
+  }
+
+  h3{
+      font-weight: 600;
+  }
+  h4{
+      margin:10px;
+  }
+  h4 a{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+  h4 a:hover{
+      color: darkblue;
+  }
+
+  

@@ -1,0 +1,48 @@
+.addBid-container{
+    top:30px;
+    width:480px;
+    height:100%;
+    position:relative;
+    margin:6% auto;
+    background: #fff;
+    padding: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #1769d4;
+	margin-bottom: 40px;
+}
+
+.addBid{
+    margin:50px;
+    border:none;
+}
+h1{
+    text-align: center;
+    margin:40px;
+}
+.addBid .form-group{
+    margin-top:50px;
+}
+.addBid .form-control{
+    outline:0;
+    border-width: 0 0 1.5px;
+}
+.alert{
+    top:20px;
+    max-width: 300px;
+    margin: auto;
+    z-index: 1000;
+}
+.addBid .form-control:focus{
+    border-color: #1769d4;
+}
+
+.addBid .btn{
+    border-radius: 15px;
+	margin-left: 85px;
+	margin-top: 50px;
+	width: 50%;
+	font-size: 15px;
+    box-shadow: 0 0 8px #2478e6;
+    background-color: #1769d4;
+    color:white;
+}

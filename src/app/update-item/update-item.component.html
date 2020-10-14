@@ -1,0 +1,29 @@
+<div class="updateItem-container">
+    <div class="updateItem">
+        <form  (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+            <h2><strong> Update Item </strong></h2>
+            <img [src]="url">
+            <div class="form-group">
+                <label for="bidName">Name</label>
+                <input type="text" class="form-control" id="itemName" [(ngModel)]="item.itemName"
+                    name="itemName">
+            </div>
+
+            <div class="form-group">
+                <label for="images">Images</label><br>
+                <input type="file" accept="image/*" multiple id="image" [(ngModel)]="item.image" name="image"
+                    (change)="updateFile($event)">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="item.description"
+                    name="description">
+            </div>
+            <div class="form-group">
+                <mat-slide-toggle [checked]="checked" (change)="toggle($event)" color="primary"
+                    [(ngModel)]="item.active" name="active" id="active">Active</mat-slide-toggle>
+            </div>
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+    </div>
+</div>

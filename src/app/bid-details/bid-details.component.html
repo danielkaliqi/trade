@@ -1,0 +1,20 @@
+<div class="bid-container">
+    <div class="bid-list" *ngIf="bidFound">
+        <div class="bid" *ngFor="let bid of bids">
+            <img src="{{bid.itemOffered.image}}">
+            <h3><strong>Name: </strong>{{bid.itemOffered.itemName}}</h3>
+            <h5>{{bid.itemOffered.description}}</h5>
+            <h5><strong>Contact: </strong>{{bid.contact}}</h5>
+            <h4><strong>Status: </strong><span
+                    style="text-transform:uppercase; font-weight: 500; color:darkblue">{{bid.status}}</span>
+            </h4>
+            <div *ngIf="myItem && bid.status=='pending'">
+                <button type="button" class="btn btn-success" (click)="acceptDeal(userId,bid.id)">Accept</button>
+                <button type="button" class="btn btn-danger" (click)="declineDeal(userId,bid.id)">Decline</button>
+            </div>
+        </div>
+    </div>
+    <div class="noBid" *ngIf="!bidFound">
+        <h1>No bids found!</h1>
+    </div>
+</div>

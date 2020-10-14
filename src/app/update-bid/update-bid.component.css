@@ -1,0 +1,13 @@
+.updateBid{
+    z-index: 997;
+    position: absolute;
+    top:100px;
+    left:50px;
+}
+
+.alert{
+    top:20px;
+    max-width: 500px;
+    margin: auto;
+    z-index: 1000;
+}

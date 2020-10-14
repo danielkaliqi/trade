@@ -1,0 +1,80 @@
+.container{
+    top:30px;
+    width:380px;
+	height:100%;
+    position:relative;
+    margin:6% auto;
+    background: #fff;
+    padding: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #1769d4;
+	margin-bottom: 30px;
+}
+.trade-login {
+		color: #636363;
+		width: 350px;
+		margin: 30px auto;
+	}
+	.trade-login .trade-content {
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+		
+	}
+	.trade-login .trade-header {
+		border-bottom: none;
+		position: relative;
+		justify-content: center;
+	}
+	.trade-login h4 {
+		text-align: center;
+		font-size: 26px;
+		color:#1769d4;
+	}
+	.trade-login  .form-group {
+		position: relative;
+		margin-top: 30px;
+	}
+	.trade-login i {
+		position: absolute;
+		left: 13px;
+		top: 11px;
+		font-size: 18px;
+	}
+	.trade-login .form-control {
+		outline:0;
+		border-width: 0 0 1.5px;
+	}
+	.trade-login .form-control:focus {
+		border-color: #1769d4;
+	}
+	.trade-login .form-control, .trade-login .btn {
+		min-height: 40px;
+		border-radius: 3px; 
+	}
+	.trade-login .hint-text {
+		text-align: center;
+		padding-top: 10px;
+	}
+	.trade-login .btn {
+		min-height: 40px;
+		border-radius: 15px;
+		margin:auto; 
+		margin-top: 50px;
+		width: 50%;
+		font-size: 15px;
+		box-shadow: 0 0 8px #2478e6;
+	}
+	.trade-login .redirect{
+		margin-top: 20px;
+		text-align: center;
+	}
+	.trade-login .redirectRegister{
+		color: #2478e6;
+	}
+	.trade-login .redirectRegister:hover{
+		color: #1769d4;
+	}
+	.trade-login .btn:hover, .trade-login .btn:focus {
+		background: #1769d4;
+	}

@@ -1,0 +1,55 @@
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+  <div class="container">
+    <div class="trade-dialog trade-register">
+      <div class="trade-content">
+        <div class="trade-header">
+          <h4 class="trade-title">SIGN UP</h4>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required minlength="3"
+            maxlength="20" #username="ngModel" placeholder="Username" />
+          <div class="alert-danger" *ngIf="f.submitted && username.invalid">
+            <div *ngIf="username.errors.required">Username is required</div>
+            <div *ngIf="username.errors.minlength">
+              Username must be at least 3 characters
+            </div>
+            <div *ngIf="username.errors.maxlength">
+              Username must be at most 20 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email #email="ngModel"
+            placeholder="Email" />
+          <div class="alert-danger" *ngIf="f.submitted && email.invalid">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">
+              Email must be a valid email address
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6"
+            #password="ngModel" placeholder="Password" />
+          <div class="alert-danger" *ngIf="f.submitted && password.invalid">
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">
+              Password must be at least 6 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Sign Up</button>
+          <div class="redirect">
+            Already have an account? <a class="redirectLogin" routerLink="/login">Log in</a>
+          </div>
+        </div>
+
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Signup failed!<br />{{ errorMessage }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
