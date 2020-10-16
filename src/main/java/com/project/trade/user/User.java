@@ -3,7 +3,6 @@ package com.project.trade.user;
 
 import com.project.trade.bid.Bid;
 import com.project.trade.item.Item;
-import com.project.trade.passwordValidation.ValidPassword;
 import com.project.trade.role.Role;
 import lombok.Getter;
 import lombok.Setter;
