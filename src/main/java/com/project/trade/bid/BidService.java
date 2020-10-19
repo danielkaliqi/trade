@@ -2,6 +2,7 @@ package com.project.trade.bid;
 
 import com.project.trade.item.Item;
 import com.project.trade.item.ItemRepository;
+import com.project.trade.item.ItemService;
 import com.project.trade.user.User;
 import com.project.trade.user.UserRepository;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,8 @@ public class BidService {
     private ItemRepository itemRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private ItemService itemService;
 
     public ResponseEntity<Set<Bid>> getAllByUserId(String userId) {
         Optional<User> user = userRepository.findById(userId);
@@ -65,6 +68,17 @@ public class BidService {
         if(user.isPresent()){
             Optional<Bid> bidData=bidRepository.findById(id);
             if(bidData.isPresent()){
+                if(bid.getStatus().equals("accepted")){
+                    Item item = itemRepository.findById(bid.getItemId()).orElse(null);
+                    if(item!=null){
+                            for(Bid toBeDeleted: itemService.getBidsForMyItem(userId, item.getId()).getBody()){
+                                if(!toBeDeleted.getId().equals(bid.getId())) {
+                                    toBeDeleted.setStatus("declined");
+                                    bidRepository.save(toBeDeleted);
+                                }
+                            }
+                    }
+                }
                 Bid newBid=bidData.get();
                 newBid.setContact(bid.getContact());
                 newBid.setStatus(bid.getStatus());
