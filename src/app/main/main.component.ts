@@ -19,7 +19,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.user=this.token.getUser();
-    console.log(this.user);
     this.userService.userAccess().subscribe(
       data => {
         this.content = data;

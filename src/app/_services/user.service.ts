@@ -13,13 +13,13 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   allAccess(): Observable<any> {
-    return this.http.get(API_URL + 'home', { responseType: 'text' });
+    return this.http.get(API_URL + 'home');
   }
   userAccess(): Observable<any>{
     return this.http.get(API_URL + 'main');
   }
   adminAccess(): Observable<any> {
-    return this.http.get(API_URL + 'admin', { responseType: 'text' });
+    return this.http.get(API_URL + 'admin');
   }
   getUser(userId:string): Observable<User>{
     return this.http.get<User>(API_URL+'getUser/'+userId);

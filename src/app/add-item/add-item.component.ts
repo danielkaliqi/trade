@@ -42,6 +42,10 @@ export class AddItemComponent implements OnInit {
   }
   updateFile(event:Event) {
     this.selectedFile = (event.target as HTMLInputElement).files[0];
+    if(this.selectedFile.size>2097152){
+      alert("File is too big!");
+    }
+    else{
     var reader=new FileReader();
     reader.readAsDataURL(this.selectedFile);
     reader.onload=(event)=>{
@@ -49,4 +53,5 @@ export class AddItemComponent implements OnInit {
     }
     this.addedItem=true;
    }
+  }
 }
